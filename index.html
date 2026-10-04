@@ -292,7 +292,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="记录我的学习生涯_"></span>
+            <span id="subtitle" data-typed-text="欢迎来到我的小站,记录我的学习生涯"></span>
           
         </div>
 
@@ -447,7 +447,9 @@
       }
       var text = subtitle.getAttribute('data-typed-text');
       
-        typing(text);
+        var texts = ["欢迎来到我的小站","记录我的学习生涯"];
+        var idx = Math.floor(Math.random() * texts.length);
+        typing(texts[idx]);
       
     })(window, document);
   </script>
