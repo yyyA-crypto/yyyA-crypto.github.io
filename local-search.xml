@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>0xGame 2026 - 欢迎来到CTF的世界！ Writeup</title>
+    <link href="/2026/10/06/welcome/"/>
+    <url>/2026/10/06/welcome/</url>
+    
+    <content type="html"><![CDATA[<h2 id="题目信息"><a href="#题目信息" class="headerlink" title="题目信息"></a>题目信息</h2><ul><li><strong>题目名称</strong>：欢迎来到CTF的世界！</li><li><strong>题目方向</strong>：Misc &#x2F; 入门</li><li><strong>题目分值</strong>：200分</li><li><strong>题目描述</strong>：对CTF还不是很了解的同学，认真看看这篇入门指北，并提交你的第一个flag吧！</li><li><strong>附件下载</strong>：<code>CTF入门指北.pdf</code></li></ul><span id="more"></span><p>这是一道专为新生设计的“签到题”。题目直接给出了提示：“认真看看这篇入门指北，并提交你的第一个flag吧”。核心步骤：下载附件 -&gt; 仔细阅读文档 -&gt; 寻找线索 -&gt; 解码获取flag。</p><h2 id="详细解题过程"><a href="#详细解题过程" class="headerlink" title="详细解题过程"></a>详细解题过程</h2><h3 id="第一步：下载并阅读附件"><a href="#第一步：下载并阅读附件" class="headerlink" title="第一步：下载并阅读附件"></a>第一步：下载并阅读附件</h3><p>下载 <code>CTF入门指北.pdf</code>，这是一篇非常详尽的指南，涵盖了Web、Misc、Reverse、Pwn、Crypto五大方向的介绍、学习路线和工具配置。我们需要从头到尾仔细阅读，寻找不寻常的字符或提示。</p><h3 id="第二步：寻找隐藏线索"><a href="#第二步：寻找隐藏线索" class="headerlink" title="第二步：寻找隐藏线索"></a>第二步：寻找隐藏线索</h3><p>当你耐心阅读到文档偏后部分（第7页），在 <strong>Misc 方向的“刷题平台”</strong> 板块末尾，会发现一段非常突兀的文字：</p><blockquote><p>为了奖励你的认真观看，这里有一串神秘字符送给你：<br><code>MHhHYW1le3dlbGNvbWVfdDBfdGhlX3cwcmxkX29mX0NURiF9</code><br>这是什么呢？学会使用搜索引擎和AI吧！</p></blockquote><h3 id="第三步：识别并解码（使用AI）"><a href="#第三步：识别并解码（使用AI）" class="headerlink" title="第三步：识别并解码（使用AI）"></a>第三步：识别并解码（使用AI）</h3><p>观察这串字符，由大小写英文字母和数字组成，且文档提示我们使用搜索引擎或AI。这种格式极其符合 <strong>Base64</strong> 编码的特征。对于新手来说，手写代码太麻烦，直接使用AI工具是最便捷的方法。</p><p><strong>使用AI解码的过程：</strong></p><ol><li>打开任意AI对话工具（如 ChatGPT、DeepSeek、文心一言、Kimi等）。</li><li>将那段神秘字符直接发给AI，并给出提示词：<blockquote><p>“请帮我识别这段字符串的编码方式，并帮我解码：MHhHYW1le3dlbGNvbWVfdDBfdGhlX3cwcmxkX29mX0NURiF9”</p></blockquote></li><li>AI会瞬间识别出这是 Base64 编码，并返回解码结果：<br><code>0xGame&#123;welcome_t0_the_w0rld_of_CTF!&#125;</code></li></ol><h3 id="第四步：提交Flag"><a href="#第四步：提交Flag" class="headerlink" title="第四步：提交Flag"></a>第四步：提交Flag</h3><p>回到比赛平台，在题目右下角的“请输入flag”输入框中，粘贴解码得到的flag：</p><pre><code class="language-text">0xGame&#123;welcome_t0_the_w0rld_of_CTF!&#125;</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>CTF</category>
+      
+      <category>Writeup</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>0xGame</tag>
+      
+      <tag>Misc</tag>
+      
+      <tag>入门</tag>
+      
+      <tag>Base64</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2026/09/23/hello-world/"/>
     <url>/2026/09/23/hello-world/</url>
